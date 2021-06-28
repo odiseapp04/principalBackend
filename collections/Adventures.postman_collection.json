@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "d01914a3-628f-42b1-886e-3cbbf6ea4faa",
+		"name": "Adventures",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Adventures",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4OTA3Mzc0OCwiZXhwIjoxNTg5MTYwMTQ4fQ.K8w-AhuKNtFMtbYsLbRfe6b3831o-ws9n7Qah38aHwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/adventure/list?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Adventure",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTQtNF8xNy0xMy0zMV9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4NjA2MzA4MSwiZXhwIjoxNTg2MTQ5NDgxfQ.RHlTq7cEv89b_pbwEb-2V-x3emaN8tqQyy6T1IHsS9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"iduser\": 2,\n\t\"nameAdventure\":\"Hola perros\",\n    \"transports\": null, \n    \"generalInfo\": null,\n    \"citySource\": null,\n    \"countrySource\": null,\n    \"cityDestination\": null,\n    \"countryDestination\": null,\n    \"distance\": null,\n    \"totalCost\": null,\n    \"price\": null,\n    \"bestPhoto\": null,\n    \"typeTravel\": null,\n    \"durationDays\": null,\n    \"isVisible\": true,\n    \"baggage\": \"El maletero\",\n    \"weather\": \"Caliente\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Adventure",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTQtNF8xNy0xMy0zMV9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4NjA2MzA4MSwiZXhwIjoxNTg2MTQ5NDgxfQ.RHlTq7cEv89b_pbwEb-2V-x3emaN8tqQyy6T1IHsS9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idadventure\": 376,\n\t\"nameAdventure\":\"Hola perro222\",\n    \"transports\": \"{'prueba':'hola'}\", \n    \"generalInfo\": null,\n    \"citySource\": \"New York\",\n    \"countrySource\": \"Colombia\",\n    \"cityDestination\": \"Pasto\",\n    \"countryDestination\": \"Colombia\",\n    \"distance\": \"1000\",\n    \"totalCost\": 12323233213,\n    \"price\": null,\n    \"bestPhoto\": \"photo\",\n    \"typeTravel\": 1,\n    \"durationDays\": 10,\n    \"isVisible\": true,\n    \"baggage\": \"El maletero updated\",\n    \"weather\": \"Frio\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Adventure",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MjMzNDcxNiwiZXhwIjoxNTgyNDIxMTE2fQ.fYygn-B2TY_gLHeseJ3ySZkqbRyKXei8Ormus3-kJS4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/adventure/38",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Adventure",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MjUxNDM5MywiZXhwIjoxNTgyNjAwNzkzfQ.FWJ_cYf4XEYgJdQt_GLBQoTECYwbBkiSeANrvo5tHHg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/adventure/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Tags",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzA0Mjc4NSwiZXhwIjoxNTgzMTI5MTg1fQ.Om7hKSHvwlaB33LIKx6vV7VW1HMV8erboYA89jLFopw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tags\":[\n\t\t1,\n\t\t2\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/tags",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Adventure Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4NDEzNjgxNSwiZXhwIjoxNTg0MjIzMjE1fQ.oEg4w4yM_d0DOr5MWmT5yKcYmazPg29_gzj1wJZhkG4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/adventure/376/info",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"376",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adventure List Filter Or",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODk4NDUzOCwiZXhwIjoxNTg5MDcwOTM4fQ.HW-Y4qPRZ4EUUrsDZD23XVF0M_JvPlAvBl4enC6uKzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idtags\":[3,1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure?filter=or&page=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "or"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adventure List Filter And",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4OTA3Mzc0OCwiZXhwIjoxNTg5MTYwMTQ4fQ.K8w-AhuKNtFMtbYsLbRfe6b3831o-ws9n7Qah38aHwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"adventureSource\":\"bogota\",\n\t\"adventureDestination\":\"panama\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure?filter=and&page=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "and"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

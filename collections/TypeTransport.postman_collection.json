@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "eaefdd66-e6c7-4ecb-92a1-a12eb0fc78ea",
+		"name": "TypeTransport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MjY2MTczNywiZXhwIjoxNTgyNzQ4MTM3fQ.pm61yY3F_tgLyF2ZjSn1CV63DziA80XTM5h2auY43EY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idstopSource\":4,\n\t\"typeTransport\":\"Avion\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/stop/10/typetransport/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"stop",
+						"10",
+						"typetransport",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MjY2MTczNywiZXhwIjoxNTgyNzQ4MTM3fQ.pm61yY3F_tgLyF2ZjSn1CV63DziA80XTM5h2auY43EY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idtypetransport\":132,\n\t\"typeTransport\":\"Barco\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/stop/10/typetransport/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"stop",
+						"10",
+						"typetransport",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MTQ2MTI1NSwiZXhwIjoxNTgxNTQ3NjU1fQ.rzTZaYKW6w8gbmiMMXG4FeiD-2UvSCF_uu2zkDXk36c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/typetransport/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"typetransport",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

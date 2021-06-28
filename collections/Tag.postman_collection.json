@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "ae8e5569-46ab-41ae-88b0-8aaaa9e0ce26",
+		"name": "Tag",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzA0Mjc4NSwiZXhwIjoxNTgzMTI5MTg1fQ.Om7hKSHvwlaB33LIKx6vV7VW1HMV8erboYA89jLFopw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Selvática\",\n\t\"description\":\"Mucha naturaleza\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tag/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tag",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzIxMTk3MCwiZXhwIjoxNTgzMjk4MzcwfQ.fII6eR6-mmQixUu8M55zODDfHNqZgMJNmOuddahsoVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://livelinessprod.herokuapp.com/api/tag/list?page=0",
+					"protocol": "https",
+					"host": [
+						"livelinessprod",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"tag",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List by Names",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODk4NDUzOCwiZXhwIjoxNTg5MDcwOTM4fQ.HW-Y4qPRZ4EUUrsDZD23XVF0M_JvPlAvBl4enC6uKzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"names\":[\n\t\t\"selvatica\",\n\t\t\"playa\"\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/tag/listbynames",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tag",
+						"listbynames"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

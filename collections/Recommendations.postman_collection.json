@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "b47392fe-2ba3-4c13-9dad-a0f78878fb42",
+		"name": "Recommendations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzA4OTEwNywiZXhwIjoxNTgzMTc1NTA3fQ.BjTxNbqjWmdnYHJvoK4hdUYPXx70kgSkucCbdPS1rkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recommendation\":\"Hola\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/stop/3/recommendation/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"stop",
+						"3",
+						"recommendation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzA4OTEwNywiZXhwIjoxNTgzMTc1NTA3fQ.BjTxNbqjWmdnYHJvoK4hdUYPXx70kgSkucCbdPS1rkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idrecommendation\":94,\n\t\"recommendation\":\"Hola editado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/stop/3/recommendation/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"stop",
+						"3",
+						"recommendation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzA4OTEwNywiZXhwIjoxNTgzMTc1NTA3fQ.BjTxNbqjWmdnYHJvoK4hdUYPXx70kgSkucCbdPS1rkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/adventure/6/stop/3/recommendation/94",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adventure",
+						"6",
+						"stop",
+						"3",
+						"recommendation",
+						"94"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

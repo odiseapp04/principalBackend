@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "d683134b-618f-44ef-a098-1619bc4cc17c",
+		"name": "Login/Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"juancholasso@hotmail.com\",\n\t\"password\":\"1234juan\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTEtMjdfMTktMS00Ml9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MDQwNzY4MSwiZXhwIjoxNTgwNDk0MDgxfQ.UDO2l1QdLy0cZO-IEKUEY25FIKDM1yc09_nFS0Tgbj0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"juancholassosss@hotmail.com\",\n\t\"password\":\"1234juan\",\n\t\"name\":\"Juan Pablo\",\n\t\"lastname\":\"Camargo Lasso\",\n\t\"telephone\":\"3223737326\",\n\t\"iddocument\":\"1233262921\",\n\t\"nickname\":\"juancholassosos\",\n\t\"gender\":\"male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MTkxMTg2MywiZXhwIjoxNTgxOTk4MjYzfQ.LnDNvK4sjK6kvgaqInR0C2AwISjEhK7yXfQwnfdK5UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uploadphoto Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiZW1haWwiOiJqdWFuY2hvbGFzc29AaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzbyJ9LCJpYXQiOjE1NzY5NDkwMjUsImV4cCI6MTU3NzAzNTQyNX0.C2GcMqdzT3Uko_QCtnKjy9Y6KcJEW_0Vw4CYcmUNZMY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/home/juanpablo/Pictures/Pepe.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/uploadphoto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"uploadphoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPhoto Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/public/uploads/imagesprofiles/2019-12-21_12-32-22_photoProfile.jpeg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"uploads",
+						"imagesprofiles",
+						"2019-12-21_12-32-22_photoProfile.jpeg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInfoProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MjE1Mjc2OCwiZXhwIjoxNTgyMjM5MTY4fQ.Gj8hoaDuc4wwOz7VRce2B9cqcs2U6iu0IIwnJZbvZZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCardsByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MDUzNDM1NiwiZXhwIjoxNTgwNjIwNzU2fQ.u1WKTozHwspYgfRKzl4ysdziAkRKzqUL95J2plcVJdc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/cards",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBankAccountsByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MTE5MjEzMywiZXhwIjoxNTgxMjc4NTMzfQ.lnn0rExDLenU7pAGQGJ_3whzS9FKa4IunF7KB2ssSeE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/bankaccounts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"bankaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAdventuresCreatedByUserAuth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTMtM180LTEtMF9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MzUyMjAxOSwiZXhwIjoxNTgzNjA4NDE5fQ.HLwR_TylFVrVPrHB0cqcCd2rhY9EvUFzMKw73DCUfPo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/adventures?page=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"adventures"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

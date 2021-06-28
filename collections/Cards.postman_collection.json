@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "8b6e22cd-deca-4287-bdaf-1dfbcb7f381c",
+		"name": "Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MiwiaWRkb2N1bWVudCI6IjEyMzM2OTIxNzA2MiIsIm5hbWUiOiJKdWFuIFBhYmxvIiwibGFzdG5hbWUiOiJDYW1hcmdvIExhc3NvIiwidGVsZXBob25lIjoiMzIyMzczNzMyNiIsImltYWdlIjoiMjAxOS0xMi0yMF8yMy0xOC0wX3Bob3RvUHJvZmlsZS5wbmciLCJlbWFpbCI6Imp1YW5jaG9sYXNzb3NAaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzb3MiLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4MTkxMTg2MywiZXhwIjoxNTgxOTk4MjYzfQ.LnDNvK4sjK6kvgaqInR0C2AwISjEhK7yXfQwnfdK5UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"iduser\": 2,\n\t\"numberCard\": \"111111111111\",\n    \"verificationCode\": \"123\",\n    \"nameUserCard\":\"Juan Camargo Lasso\",\n    \"expiredDate\":\"2020-01-14\",\n    \"typeCard\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cards/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cards",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDE5LTEyLTI3XzIwLTM3LTEyX3Bob3RvUHJvZmlsZS5qcGVnIiwiZW1haWwiOiJqdWFuY2hvbGFzc29AaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzbyJ9LCJpYXQiOjE1Nzk2NjM1NzAsImV4cCI6MTU3OTc0OTk3MH0.8b5y7lLKcNMD_TElJ_9KT5-rPCQMTguk90IwfpTWBjs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cards",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDE5LTEyLTI3XzIwLTM3LTEyX3Bob3RvUHJvZmlsZS5qcGVnIiwiZW1haWwiOiJqdWFuY2hvbGFzc29AaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzbyJ9LCJpYXQiOjE1Nzk2NjM1NzAsImV4cCI6MTU3OTc0OTk3MH0.8b5y7lLKcNMD_TElJ_9KT5-rPCQMTguk90IwfpTWBjs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idcard\":1,\n\t\"numberCard\": \"213123123123\",\n    \"verificationCode\": 423623,\n    \"nameUserCard\":\"Juan Camargo Lasso\",\n    \"expiredDate\":\"2020-01-14\",\n    \"typeCard\": 11\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cards/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cards",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDE5LTEyLTI3XzIwLTM3LTEyX3Bob3RvUHJvZmlsZS5qcGVnIiwiZW1haWwiOiJqdWFuY2hvbGFzc29AaG90bWFpbC5jb20iLCJuaWNrbmFtZSI6Imp1YW5jaG9sYXNzbyJ9LCJpYXQiOjE1Nzk2NjM1NzAsImV4cCI6MTU3OTc0OTk3MH0.8b5y7lLKcNMD_TElJ_9KT5-rPCQMTguk90IwfpTWBjs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cards/delete/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cards",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

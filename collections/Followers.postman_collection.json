@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "e9aee6fe-08c4-4a35-bc32-b65868aebe4b",
+		"name": "Followers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add follower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTUtNF8yMy00My01OF9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODY1MDYwNCwiZXhwIjoxNTg4NzM3MDA0fQ.GXNkOi3EGFb6DaYCoy-4h9DAzqtPS0ekACTN9FQWik0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_auth\":1,\n\t\"id\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/addfollower",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addfollower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Count Followers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTUtNF8yMy00My01OF9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODY1MDYwNCwiZXhwIjoxNTg4NzM3MDA0fQ.GXNkOi3EGFb6DaYCoy-4h9DAzqtPS0ekACTN9FQWik0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_auth\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/getcountfollowers",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getcountfollowers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Follower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTQtNF8xNy0xMy0zMV9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4NzM1NTI1OSwiZXhwIjoxNTg3NDQxNjU5fQ.8OSqz_N42XSJ7A5aJNRwj-WAtEt5sXoPX-H79P_xH80",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_auth\":1,\n\t\"id\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://followersws.herokuapp.com/api/deletefollower",
+					"protocol": "https",
+					"host": [
+						"followersws",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"deletefollower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IsFollower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTUtNF8yMy00My01OF9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODY1MDYwNCwiZXhwIjoxNTg4NzM3MDA0fQ.GXNkOi3EGFb6DaYCoy-4h9DAzqtPS0ekACTN9FQWik0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":2,\n\t\"id_auth\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/isfollower",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"isfollower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Count Following",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkdXNlciI6MSwiaWRkb2N1bWVudCI6IjEyMzM2OTE3MDYyIiwibmFtZSI6Ikp1YW4gUGFibG8iLCJsYXN0bmFtZSI6IkNhbWFyZ28gTGFzc28iLCJ0ZWxlcGhvbmUiOiIzMjIzNzM3MzI2IiwiaW1hZ2UiOiIyMDIwLTUtNF8yMy00My01OF9waG90b1Byb2ZpbGUuanBlZyIsImVtYWlsIjoianVhbmNob2xhc3NvQGhvdG1haWwuY29tIiwibmlja25hbWUiOiJqdWFuY2hvbGFzc28iLCJnZW5kZXIiOiJtYWxlIn0sImlhdCI6MTU4ODY1MDYwNCwiZXhwIjoxNTg4NzM3MDA0fQ.GXNkOi3EGFb6DaYCoy-4h9DAzqtPS0ekACTN9FQWik0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_auth\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/getcountfollowing",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getcountfollowing"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
