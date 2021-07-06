@@ -97,7 +97,10 @@ class AdventureService extends BaseService{
         }
         catch(err){
             this.logger.error("createAdventure@AdventureService "+ JSON.stringify(err));
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+                "message":JSON.parse(process.env.errors).internal_server_error,
+                error: err
+            });
         }
     }
 
@@ -136,7 +139,10 @@ class AdventureService extends BaseService{
         }
         catch(err){
             this.logger.error("updateAdventure@AdventureService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+                "message":JSON.parse(process.env.errors).internal_server_error,
+                error: err
+            });
         }
     }
 
@@ -157,7 +163,10 @@ class AdventureService extends BaseService{
         }
         catch(err){
             this.logger.error("setTags@AdventureService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
         }
     }
 }

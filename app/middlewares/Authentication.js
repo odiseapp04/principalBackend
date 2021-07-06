@@ -95,7 +95,10 @@ let checkTokenByStorageFiles = async function (req, res, next){
     }
     catch(err){
         logger.error("checkTokenByStorageFiles@Authentication_Middleware "+ JSON.stringify(err)+err);
-        res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+        res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
     }
 }
 
@@ -111,7 +114,10 @@ let checkUserFolder = async function (req, res, next){
             res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
     }
     catch(err){
-        res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+        res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
     }
 }
 

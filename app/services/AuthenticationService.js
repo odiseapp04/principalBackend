@@ -22,7 +22,10 @@ class AuthenticationService extends BaseService{
     async login(req,res,next){
         passport.authenticate('login', async(err, user, info)=>{
             if(err)
-                return res.status(500).json({error: JSON.parse(process.env.errors).internal_server_error });
+                return res.status(500).json({
+                    message: JSON.parse(process.env.errors).internal_server_error,
+                    error: err
+                });
             if(!user)
                 return res.status(401).json({error: JSON.parse(process.env.errors).user_pass_invalid });
             let token = AuthenticationHelper.generateJWT(this.userController.serializeUser(user));
@@ -41,7 +44,10 @@ class AuthenticationService extends BaseService{
        }
        catch(err){
             this.logger.error("logout@RegisterService "+ JSON.stringify(err));
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
        }
     }
 

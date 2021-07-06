@@ -31,7 +31,10 @@ class CautionService extends BaseService{
         }
         catch(err){
             this.logger.error("createCaution@CautionService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+                message: JSON.parse(process.env.errors).internal_server_error, 
+                error: err
+            });
         }
     }
 
@@ -53,7 +56,10 @@ class CautionService extends BaseService{
         }
         catch(err){
             this.logger.error("updateCaution@CautionService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
         }
     }
 

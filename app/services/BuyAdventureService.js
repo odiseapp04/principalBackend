@@ -66,7 +66,10 @@ class BuyAdventureService extends BaseService{
         }
         catch(err){
             this.logger.error("createBuyAdventure@BuyAdventureService "+ JSON.stringify(err));
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+                message: JSON.parse(process.env.errors).internal_server_error, 
+                error: err
+            });
         }
     }
 

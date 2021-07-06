@@ -30,7 +30,10 @@ class TagService extends BaseService{
         }
         catch(err){
             this.logger.error("createTag@TagService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+                message: JSON.parse(process.env.errors).internal_server_error, 
+                error: err
+            });
         }
     }
 
@@ -52,7 +55,10 @@ class TagService extends BaseService{
         }
         catch(err){
             this.logger.error("updateTag@TagService "+ JSON.stringify(err)+err);
-            res.status(500).json({"error":JSON.parse(process.env.errors).internal_server_error});
+            res.status(500).json({
+        message: JSON.parse(process.env.errors).internal_server_error, 
+        error: err
+    });
         }
     }
 
