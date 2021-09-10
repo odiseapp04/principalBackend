@@ -18,15 +18,15 @@ var Stop = sequelize.define('Stops', {
     },
     nameLocationStop:{
         type: Sequelize.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     latitude: {
         type: Sequelize.STRING(20),
-        allowNull: false
+        allowNull: true
     },
     longitude: {
         type: Sequelize.STRING(20),
-        allowNull: false
+        allowNull: true
     },
     description: {
         type: Sequelize.TEXT,

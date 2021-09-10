@@ -74,7 +74,7 @@ async function validateCard(card){
 async function validateStop(stop){
     const validator = new Validator(stop, {
         idstop: 'numeric|sometimes',
-        nameStop: 'string|maxLength:200', 
+        nameStop: 'string|maxLength:200|nullable', 
         latitude: 'string|maxLength:20|nullable',
         longitude: 'string|maxLength:20|nullable',
         description: 'string|nullable',
