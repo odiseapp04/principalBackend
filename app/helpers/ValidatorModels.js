@@ -40,9 +40,9 @@ async function validateAdventure(adventure){
         totalCost: 'numeric|maxLength:15|nullable',
         price: 'numeric|maxLength:15|nullable',
         bestPhoto: 'string|nullable',
-        typeTravel: 'required|string|maxLength:200',
+        typeTravel: 'string|maxLength:200',
         durationDays: 'numeric|maxLength:4|nullable',
-        isVisible: 'required|boolean',
+        isVisible: 'boolean',
         baggage: 'string|nullable',
         weather: 'string|maxLength:50|nullable'
         },JSON.parse(process.env.validators)
@@ -74,12 +74,12 @@ async function validateCard(card){
 async function validateStop(stop){
     const validator = new Validator(stop, {
         idstop: 'numeric|sometimes',
-        nameStop: 'required|string|maxLength:200', 
+        nameStop: 'string|maxLength:200', 
         latitude: 'string|maxLength:20|nullable',
         longitude: 'string|maxLength:20|nullable',
         description: 'string|nullable',
         cost: 'maxLength:15|nullable',
-        wheather: 'string|maxLength:50|required',
+        wheather: 'string|maxLength:50|nullable',
         order: 'numeric|maxLength:5|nullable',
         isPointStart: 'boolean|nullable'
 

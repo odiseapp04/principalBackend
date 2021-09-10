@@ -66,7 +66,7 @@ var Adventure = sequelize.define('Adventures', {
     },
     typeTravel: {
         type: Sequelize.STRING(200),
-        allowNull: false
+        allowNull: true
     },
     durationDays: {
         type: Sequelize.INTEGER,

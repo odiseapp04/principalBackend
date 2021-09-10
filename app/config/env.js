@@ -9,11 +9,11 @@ process.env.PORT = process.env.PORT || 3000
 process.env.PRODUCTION = false
 
 //VARIABLES DATABASE
-process.env.DB_HOST = process.env.DB_HOST || "ec2-107-21-122-38.compute-1.amazonaws.com"
-process.env.DB_DATABASE = process.env.DB_DATABASE || "d6ho66lcuehn77"
-process.env.DB_USERNAME = process.env.DB_USERNAME || "goyrkqdlmhyutc"
-process.env.DB_PASSWORD = process.env.DB_PASSWORD || "ee7432455d757046196ce598d14fc7f3d7af9371dc4ddf9758af0b9ad8af327e"
-process.env.DB_DIALECT = process.env.DB_DIALECT || "postgres"
+process.env.DB_HOST = process.env.DB_HOST || "b5aeevppueqseufziln3-mysql.services.clever-cloud.com"
+process.env.DB_DATABASE = process.env.DB_DATABASE || "b5aeevppueqseufziln3"
+process.env.DB_USERNAME = process.env.DB_USERNAME || "uueq5tohzj7pqxm9"
+process.env.DB_PASSWORD = process.env.DB_PASSWORD || "IgzXFdiCaKbK74LVQH85"
+process.env.DB_DIALECT = process.env.DB_DIALECT || "mysql"
 
 //DATA ADMIN
 process.env.ADMIN_ROLE = "admin"
