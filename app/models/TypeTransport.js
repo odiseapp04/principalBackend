@@ -18,7 +18,7 @@ var TypeTransport = sequelize.define('TypeTransport', {
     },
     indications: {
         type: Sequelize.STRING(255),
-        allowNull: false,
+        allowNull: true,
     },
 },{
     onUpdate: 'CASCADE',

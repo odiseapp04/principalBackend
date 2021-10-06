@@ -19,9 +19,9 @@ class TypeTransportService extends BaseService{
             var check = await validator.check();    
             if(!check)
                 res.status(400).json({"error":validator.errors});
-            var typeTransport = await this.typeTransportController.createTypeTransport(
-                req.body.idstopSource, 
+            var typeTransport = await this.typeTransportController.createTypeTransport( 
                 req.params.idstop, //Origin or destination
+                req.body.indications,
                 req.body.typeTransport
             );
             res.status(201).json({
@@ -46,7 +46,8 @@ class TypeTransportService extends BaseService{
                 res.status(400).json({"error":validator.errors});
             var typeTransport = await this.typeTransportController.updateTypeTransport(
                 req.body.idtypetransport, 
-                req.body.typeTransport
+                req.body.typeTransport,
+                req.body.indications
             );
             res.status(201).json({
                 "ok":JSON.parse(process.env.success).typeTransport_updated,

@@ -26,15 +26,15 @@ class TypeTransportController extends BaseController{
     /**
      * Create typeTransport with required params
      */
-    async createTypeTransport(pidstopSource, pidstopDestination, ptypeTransport){
+    async createTypeTransport(pidstop, pindications, ptypeTransport){
         let transaction;
         try{
             transaction = await this.sequelize.transaction();
 
             let typeTransport = await TypeTransport.create({
-                idstopSource:pidstopSource,
-                idstopDestination:pidstopDestination,
-                typeTransport:ptypeTransport
+                idStop: pidstop,
+                indications: pindications,
+                typeTransport: ptypeTransport
             }, {transaction: transaction})
 
             await transaction.commit();
@@ -49,13 +49,14 @@ class TypeTransportController extends BaseController{
     /**
      * Update TypeTransport with required params
      */
-    async updateTypeTransport(idtypetransport, ptypeTransport){
+    async updateTypeTransport(idtypetransport, ptypeTransport, pindications){
         let transaction;
         try{
             transaction = await this.sequelize.transaction();
 
             let typeTransport = await TypeTransport.update({
-                typeTransport:ptypeTransport
+                typeTransport: ptypeTransport,
+                indications: pindications
             }, 
             {where: {idtypetransport: idtypetransport}}, {transaction: transaction});
             await transaction.commit();
