@@ -8,16 +8,15 @@ var TypeTransport = sequelize.define('TypeTransport', {
         primaryKey: true, 
         autoIncrement: true
     },
-    idstopSource: {
-        type: Sequelize.INTEGER,
-        unique: true
-    },
-    idstopDestination: {
+    idStop: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        unique: true
     },
     typeTransport: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+    },
+    indications: {
         type: Sequelize.STRING(255),
         allowNull: false,
     },

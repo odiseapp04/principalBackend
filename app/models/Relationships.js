@@ -63,8 +63,7 @@ Caution.belongsTo(Stop,{as:"stop", foreignKey: 'idstop'});
 /**
  * Relation one to one between stops
  */
-Stop.hasOne(TypeTransport, { as: 'nextStop', foreignKey: 'idstopSource' });
-Stop.hasOne(TypeTransport, { as: 'previousStop', foreignKey: 'idstopDestination' });
+Stop.hasOne(TypeTransport, { as: 'stop', foreignKey: 'idStop' });
 
 /**
  * Relation Adventure has many tag, and Tag has many Adventure
