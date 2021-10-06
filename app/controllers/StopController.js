@@ -17,7 +17,7 @@ class StopController extends BaseController{
      */
     async getStop(idstop){
         try{
-            let stop = await Stop.findByPk(idstop, {include: ["images", "recommendations", "cautions", "stopPhones", "previousStop"]});
+            let stop = await Stop.findByPk(idstop, {include: ["images", "recommendations", "cautions", "stopPhones", "typeTransport"]});
             return stop;
         }
         catch(err){

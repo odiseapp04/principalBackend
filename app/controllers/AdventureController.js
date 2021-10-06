@@ -43,7 +43,7 @@ class AdventureController extends BaseController{
                 {
                     model: Stop,
                     as: 'stops',
-                    include: ['images', 'recommendations', 'cautions', 'stopPhones', 'previousStop']
+                    include: ['images', 'recommendations', 'cautions', 'stopPhones', 'typeTransport']
                 }
             ],
             order: [

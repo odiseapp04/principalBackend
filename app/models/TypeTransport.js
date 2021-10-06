@@ -8,7 +8,7 @@ var TypeTransport = sequelize.define('TypeTransport', {
         primaryKey: true, 
         autoIncrement: true
     },
-    idStop: {
+    idstop: {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
