@@ -14,7 +14,7 @@ var TypeTransport = sequelize.define('TypeTransport', {
     },
     typeTransport: {
         type: Sequelize.STRING(255),
-        allowNull: false,
+        allowNull: true,
     },
     indications: {
         type: Sequelize.STRING(255),
