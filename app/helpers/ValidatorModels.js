@@ -151,7 +151,7 @@ async function validateCaution(caution){
 async function validateTypeTransport(typeTransport){
     const validator = new Validator(typeTransport, {
         idtypetransport: 'numeric|sometimes',
-        typeTransport: 'string|maxLength:255|required'
+        typeTransport: 'string|maxLength:255|nullable'
         },JSON.parse(process.env.validators)
     );
     return await validator;
