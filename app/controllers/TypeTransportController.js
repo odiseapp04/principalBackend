@@ -32,7 +32,7 @@ class TypeTransportController extends BaseController{
             transaction = await this.sequelize.transaction();
 
             let typeTransport = await TypeTransport.create({
-                idStop: pidstop,
+                idstop: pidstop,
                 indications: pindications,
                 typeTransport: ptypeTransport
             }, {transaction: transaction})
