@@ -2,11 +2,9 @@ import AuthenticationService from '../services/AuthenticationService';
 import AuthenticationHelper from '../helpers/AuthenticationHelper';
 import UserController from '../controllers/UserController';
 import Logger from '../imports/Logger';
-import DBAuth from '../imports/DBAuth';
 
 const userController = new UserController;
 const logger = Logger.getLogger();
-const dbAuthRedisClient = DBAuth;
 
 /**
  * Decode JWT to user JSON
@@ -31,28 +29,28 @@ let checkToken =  async function (req, res, next){
         /**
          * Authentication using Postgres
          */
-        // let user = await userController.getUser(req.payload.data.iduser);
-        // //Validate if user exist
-        // if(user)
-        //     if(user.token == req.headers.authorization.replace("Bearer ",""))
-        //         next();
-        //     else
-        //         res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        // else
-        //     res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        let user = await userController.getUser(req.payload.data.iduser);
+        //Validate if user exist
+        if(user)
+            if(user.token == req.headers.authorization.replace("Bearer ",""))
+                next();
+            else
+                res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        else
+            res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
         /**
          * Authentication using REDIS
          */
-        await userController.getToken(req.payload.data.iduser, (token)=>{
-            //Validate token
-            if(token)
-                if(token == req.headers.authorization.replace("Bearer ",""))
-                    next();
-                else
-                    res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-            else
-                res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        }),(res, req, next);
+        // await userController.getToken(req.payload.data.iduser, (token)=>{
+        //     //Validate token
+        //     if(token)
+        //         if(token == req.headers.authorization.replace("Bearer ",""))
+        //             next();
+        //         else
+        //             res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        //     else
+        //         res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        // }),(res, req, next);
     }
     catch(err){
         throw err;
@@ -69,28 +67,28 @@ let checkTokenByStorageFiles = async function (req, res, next){
         //Concate Bearer to token
         let userPayload = AuthenticationHelper.decodeJWT("Bearer "+tokenReq);
         
-        // let user = await userController.getUser(userPayload.data.iduser);
-        // req.payload = userPayload;
-        // //Validate if user exist
-        // if(user)
-        //     if(user.token == token)
-        //         next();
-        //     else
-        //         res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        // else
-        //     res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-
-
-        await userController.getToken(userPayload.data.iduser, (token)=>{
-            //Validate token
-            if(token)
-                if(token == req.query.token)
-                    next();
-                else
-                    res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        let user = await userController.getUser(userPayload.data.iduser);
+        req.payload = userPayload;
+        //Validate if user exist
+        if(user)
+            if(user.token == token)
+                next();
             else
                 res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        }),(res, req, next);
+        else
+            res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+
+
+        // await userController.getToken(userPayload.data.iduser, (token)=>{
+        //     //Validate token
+        //     if(token)
+        //         if(token == req.query.token)
+        //             next();
+        //         else
+        //             res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        //     else
+        //         res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
+        // }),(res, req, next);
 
     }
     catch(err){

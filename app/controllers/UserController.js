@@ -89,8 +89,8 @@ class UserController extends BaseController{
      */
     async updateToken(piduser, ptoken){
         try{
-            // await User.update({token: ptoken}, {where : {iduser:piduser}});
-            this.dbAuthRedisClient.set(piduser, ptoken);
+            await User.update({ token: ptoken }, { where : { iduser:piduser }});
+            // this.dbAuthRedisClient.set(piduser, ptoken);
         }
         catch(err){
             throw err;
@@ -102,13 +102,10 @@ class UserController extends BaseController{
      * @param {*} iduser
      * callback********
      */
-    async getToken(iduser, callback){
+    async getToken(iduser){
         try{
-            this.dbAuthRedisClient.get(iduser, (err, token)=>{
-                if(err)
-                    throw err;
-                return callback(token)
-            });
+            let userToken = await User.findByPk(iduser).token;
+            return userToken;
         }
         catch(err){
             throw err;
