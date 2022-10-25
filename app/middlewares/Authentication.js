@@ -71,25 +71,12 @@ let checkTokenByStorageFiles = async function (req, res, next){
         req.payload = userPayload;
         //Validate if user exist
         if(user)
-            if(user.token == token)
+            if(user.token === tokenReq)
                 next();
             else
                 res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
         else
             res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-
-
-        // await userController.getToken(userPayload.data.iduser, (token)=>{
-        //     //Validate token
-        //     if(token)
-        //         if(token == req.query.token)
-        //             next();
-        //         else
-        //             res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        //     else
-        //         res.status(401).json({"error": JSON.parse(process.env.errors).token_invalid})
-        // }),(res, req, next);
-
     }
     catch(err){
         logger.error("checkTokenByStorageFiles@Authentication_Middleware "+ JSON.stringify(err)+err);
